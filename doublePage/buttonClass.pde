@@ -1,6 +1,6 @@
 class Button {
-  static final int W = 60, H = 40, TXTSZ = 020;
-  static final color darkCyan = #00A0A0, cyan = #00FFFF, black = 0;
+  static final int W = 100, H = 100, TXTSZ = 020;
+  static final color light = #B8b8b8 , red = #7B0100, black = #101010, dark = #424242;
  
   final String label;
   final int x, y, xW, yH;
@@ -17,9 +17,15 @@ class Button {
     yH = yy + H;
   }
     void display() {
-    fill(isHovering? cyan : darkCyan);
+    
+    smooth();
+    noStroke();
+    fill(red);
+    rect(x, y, W+5, H+5, 10);
+
+    fill(isHovering? dark : black);
     rect(x, y, W, H);
-    fill(black);
+    fill(red);
     text(label, x + W/2, y + H/2);
   }
  

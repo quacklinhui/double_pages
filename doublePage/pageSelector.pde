@@ -1,4 +1,4 @@
-void pageSelector() { // Replaces method("") for PJS
+void pageSelector() { 
   switch(page) {
   case 0: 
     page0();
